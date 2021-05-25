@@ -86,7 +86,7 @@ const i3 = document.querySelector('.i-3');
 const out3 = document.querySelector('.out-3');
 
 function disariumNumber() {
-    let n = +i3.value;
+    let n = +i3.value; // перевод в число
     let sum = 0;
     let str = n + '';
     for (let i = 0; i < str.length; i++) {
