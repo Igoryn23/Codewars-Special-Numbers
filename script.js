@@ -80,3 +80,18 @@ function strongNumber() {
     }
 }
 document.querySelector('.b-2').onclick = strongNumber;
+
+// Disarium Number (Special Numbers Series #3)
+const i3 = document.querySelector('.i-3');
+const out3 = document.querySelector('.out-3');
+
+function disariumNumber() {
+    let n = +i3.value;
+    let sum = 0;
+    let str = n + '';
+    for (let i = 0; i < str.length; i++) {
+        sum += str[i] ** (i + 1);
+    }
+    (sum === n) ? out3.innerHTML = 'Disarium !!': out3.innerHTML = 'Not !!';
+}
+document.querySelector('.b-3').onclick = disariumNumber;
