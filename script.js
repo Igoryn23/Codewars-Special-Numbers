@@ -110,10 +110,9 @@ function jumpingNumber() {
     if (arr.length === 1) {
         console.log('Jumping!!');
     }
-    arr.reverse();
     let count = 1;
     for (let i = 0; i < arr.length - 1; i++) {
-        if (arr[i] === arr[i + 1] - 1 || arr[i] === arr[i + 1] + 1) {
+        if (Math.abs(arr[i] - arr[i + 1]) === 1) {
             count++;
         } else {
             console.log(false);
