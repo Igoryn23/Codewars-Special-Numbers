@@ -123,3 +123,24 @@ function jumpingNumber() {
     (count === arr.length) ? out4.innerHTML = true: out4.innerHTML = false;
 }
 document.querySelector('.b-4').onclick = jumpingNumber;
+
+// Special Number (Special Numbers Series #5)
+const i5 = document.querySelector('.i-5');
+const out5 = document.querySelector('.out-5');
+
+function specialNumber() {
+    let n = +i5.value;
+    n = n.toString().split('');
+    let arr = n.map(function(elem) {
+        return +elem;
+    })
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > 5) {
+            out5.innerHTML = 'NOT!!';
+            return "NOT!!";
+        }
+    }
+    out5.innerHTML = 'Special!!';
+    return "Special!!"
+}
+document.querySelector('.b-5').onclick = specialNumber;
