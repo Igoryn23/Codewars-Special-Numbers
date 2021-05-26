@@ -95,3 +95,32 @@ function disariumNumber() {
     (sum === n) ? out3.innerHTML = 'Disarium !!': out3.innerHTML = 'Not !!';
 }
 document.querySelector('.b-3').onclick = disariumNumber;
+
+// Jumping Number (Special Numbers Series #4)
+const i4 = document.querySelector('.i-4');
+const out4 = document.querySelector('.out-4');
+
+function jumpingNumber() {
+    let n = +i4.value;
+    let arr = [];
+    while (n) {
+        arr.push(n % 10);
+        n = Math.floor(n / 10);
+    }
+    if (arr.length === 1) {
+        console.log('Jumping!!');
+    }
+    arr.reverse();
+    let count = 1;
+    for (let i = 0; i < arr.length - 1; i++) {
+        if (arr[i] === arr[i + 1] - 1 || arr[i] === arr[i + 1] + 1) {
+            count++;
+        } else {
+            console.log(false);
+        }
+
+    }
+    console.log(count);
+    (count === arr.length) ? out4.innerHTML = true: out4.innerHTML = false;
+}
+document.querySelector('.b-4').onclick = jumpingNumber;
