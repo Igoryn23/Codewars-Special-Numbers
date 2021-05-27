@@ -144,3 +144,26 @@ function specialNumber() {
     return "Special!!"
 }
 document.querySelector('.b-5').onclick = specialNumber;
+
+// Automorphic Number (Special Numbers Series #6)
+const i6 = document.querySelector('.i-6');
+const out6 = document.querySelector('.out-6');
+
+function automorphic() {
+    let n = +i6.value;
+    let n2 = n * n;
+    // переводим числа в массив и реверсуем
+    let str = n.toString().split('').reverse();
+    let str2 = n2.toString().split('').reverse();
+    // алгоритм проверки 
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] !== str2[i]) {
+            out6.innerHTML = 'Not!!';
+            return "Not!!";
+        }
+    }
+    out6.innerHTML = 'Automorphic';
+    return "Automorphic";
+}
+
+document.querySelector('.b-6').onclick = automorphic;
