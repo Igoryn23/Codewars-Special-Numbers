@@ -167,3 +167,22 @@ function automorphic() {
 }
 
 document.querySelector('.b-6').onclick = automorphic;
+
+
+//  Extra Perfect Numbers (Special Numbers Series #7)
+const i7 = document.querySelector('.i-7');
+const out7 = document.querySelector('.out-7');
+
+function extraPerfect() {
+    let num = +i7.value;
+    let arr = [];
+    for (let i = 1; i <= num; i++) {
+        if (i % 2) {
+            arr.push(i);
+        }
+    }
+    out7.innerHTML = arr;
+    return arr;
+}
+
+document.querySelector('.b-7').onclick = extraPerfect;
