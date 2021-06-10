@@ -186,3 +186,23 @@ function extraPerfect() {
 }
 
 document.querySelector('.b-7').onclick = extraPerfect;
+
+// Tidy Number (Special Numbers Series #9)
+const i9 = document.querySelector('.i-9');
+const out9 = document.querySelector('.out-9');
+
+function tidyNumber() {
+    let n = +i9.value;
+    n = n.toString().split('');
+    for (let i = 0; i < n.length; i++) {
+        if (n[i] > n[i + 1]) {
+            out9.innerHTML = 'False';
+            return false;
+        }
+    }
+    out9.innerHTML = 'True';
+    return true;
+
+}
+
+document.querySelector('.b-9').onclick = tidyNumber;
